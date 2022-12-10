@@ -1,0 +1,66 @@
+{
+  "name": "attributes-collapse",
+  "displayName": "Attributes Collapse",
+  "description": "The extension is designed to automatically collapse className and class attributes in TSX, JSX, and HTML files to a single line, reducing the length of lines and making the code easier to read and navigate. This idea was inspired by the frustration that many developers using CSS frameworks like Tailwind CSS have expressed about the length of class names in their code.",
+  "version": "0.0.1",
+  "repository": "https://github.com/akr-oss/attributes-collapse",
+  "publisher": "AKROSS",
+  "bugs": {
+    "url": "https://github.com/akr-oss/attributes-collapse/issues"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "icon": "static/logo.png",
+  "keywords": [
+    "collapse",
+    "attributes",
+    "tailwind",
+    "className",
+    "jsx",
+    "tsx"
+  ],
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "categories": [
+    "Formatters",
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "attributes-collapse.toggle",
+        "title": "Toggle Attributes Collapse"
+      }
+    ]
+  },
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "pnpm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "prettier": "^2.8.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}
