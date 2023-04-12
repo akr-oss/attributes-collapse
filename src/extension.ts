@@ -130,6 +130,7 @@ function triggerUpdateDecorations(
     'razor',
     'ruby',
     'rust',
+    'svelte',
   ]
 
   if (!enabledLanguageIds.includes(activeEditor.document.languageId)) {
